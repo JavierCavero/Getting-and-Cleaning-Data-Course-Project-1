@@ -53,4 +53,5 @@ names(Data)
 
 tidy_data <- Data %>% group_by(activity, subject) %>% summarise_each(funs(mean))
 
-write.csv(tidy_data, file = "tidydata.csv")
+#write.csv(tidy_data, file = "tidydata.csv")
+write.table(tidy_data, file = "tidydata.txt", row.name= FALSE)

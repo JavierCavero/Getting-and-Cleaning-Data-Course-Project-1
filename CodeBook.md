@@ -123,8 +123,8 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 tidy_data <- Data %>% group_by(activity, subject) %>% summarise_each(funs(mean))
 ```
 
-#### output tidydata to csv file `tidydata.csv`
+#### output tidydata to .txt file `tidydata.txt`
 
 ``` r
-write.csv(tidy_data, file = "tidydata.csv")
+write.table(tidy_data, file = "tidydata.txt", row.name= FALSE)
 ```
